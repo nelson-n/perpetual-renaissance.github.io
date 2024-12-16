@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const LandingPage = () => {
@@ -8,7 +9,7 @@ const LandingPage = () => {
           Welcome to Perpetual Renaissance
         </h2>
         <img
-          src={`${process.env.PUBLIC_URL}/assets/Promo1.png`} // Dynamically construct the image path
+          src="https://nelson-n.github.io/perpetual-renaissance.github.io/assets/Promo1.png" // Hardcoded absolute path
           alt="Perpetual Renaissance Watch"
           className="max-w-md mx-auto rounded-md shadow-lg"
         />
