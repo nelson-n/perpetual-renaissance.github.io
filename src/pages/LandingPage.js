@@ -8,7 +8,7 @@ const LandingPage = () => {
           Welcome to Perpetual Renaissance
         </h2>
         <img
-          src={`${process.env.PUBLIC_URL}/assets/Promo1.png`} // Dynamically construct the image path
+          src="./assets/Promo1.png" // Relative path from the deployed build root
           alt="Perpetual Renaissance Watch"
           className="max-w-md mx-auto rounded-md shadow-lg"
         />
