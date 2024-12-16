@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/per-renaissance.github.io/static/css/main.d933aa17.css",
+    "main.js": "/per-renaissance.github.io/static/js/main.f8a80e53.js",
+    "static/js/488.1c1c22f8.chunk.js": "/per-renaissance.github.io/static/js/488.1c1c22f8.chunk.js",
+    "index.html": "/per-renaissance.github.io/index.html",
+    "main.d933aa17.css.map": "/per-renaissance.github.io/static/css/main.d933aa17.css.map",
+    "main.f8a80e53.js.map": "/per-renaissance.github.io/static/js/main.f8a80e53.js.map",
+    "488.1c1c22f8.chunk.js.map": "/per-renaissance.github.io/static/js/488.1c1c22f8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d933aa17.css",
+    "static/js/main.f8a80e53.js"
+  ]
+}
