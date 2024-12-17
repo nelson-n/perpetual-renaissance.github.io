@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/perpetual-renaissance.github.io/static/css/main.d75cb025.css",
-    "main.js": "/perpetual-renaissance.github.io/static/js/main.3c88478e.js",
+    "main.js": "/perpetual-renaissance.github.io/static/js/main.9fb70df7.js",
     "static/js/488.1c1c22f8.chunk.js": "/perpetual-renaissance.github.io/static/js/488.1c1c22f8.chunk.js",
     "index.html": "/perpetual-renaissance.github.io/index.html",
     "main.d75cb025.css.map": "/perpetual-renaissance.github.io/static/css/main.d75cb025.css.map",
-    "main.3c88478e.js.map": "/perpetual-renaissance.github.io/static/js/main.3c88478e.js.map",
+    "main.9fb70df7.js.map": "/perpetual-renaissance.github.io/static/js/main.9fb70df7.js.map",
     "488.1c1c22f8.chunk.js.map": "/perpetual-renaissance.github.io/static/js/488.1c1c22f8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d75cb025.css",
-    "static/js/main.3c88478e.js"
+    "static/js/main.9fb70df7.js"
   ]
 }
