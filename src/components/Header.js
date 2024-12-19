@@ -1,16 +1,39 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="bg-white shadow">
+    <header className="bg-accent shadow">
       <nav className="container mx-auto flex items-center justify-between py-4 px-6">
-        <h1 className="text-2xl font-bold text-gray-800">Perpetual Renaissance</h1>
-        <div>
-          <Link to="/" className="text-gray-700 hover:text-gray-900 px-4">
-            Home
+        {/* Logo and Title */}
+        <div className="flex items-center">
+          <Link to="/">
+            <h1 className="text-brownAccent text-lg ml-4">
+              <span className="font-semibold">Perpetual</span>{' '}
+              <span className="font-normal">Renaissance</span>
+            </h1>
           </Link>
-          <Link to="/story" className="text-gray-700 hover:text-gray-900 px-4">
+        </div>
+
+        {/* Navigation Links */}
+        <div className="flex space-x-6">
+          <Link
+            to="/"
+            className="text-brownAccent font-semibold hover:text-black transition-colors duration-300"
+          >
+            Welcome
+          </Link>
+          <Link
+            to="/watches"
+            className="text-brownAccent font-semibold hover:text-black transition-colors duration-300"
+          >
+            Watches
+          </Link>
+          <Link
+            to="/story"
+            className="text-brownAccent font-semibold hover:text-black transition-colors duration-300"
+          >
             Story
           </Link>
         </div>
