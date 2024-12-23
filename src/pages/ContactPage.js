@@ -1,18 +1,35 @@
+
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { useInView } from "react-intersection-observer";
 
 const ContactPage = () => {
   const form = useRef();
+
+  const { ref: imageRef, inView: imageInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  const { ref: headerRef, inView: headerInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  const { ref: formRef, inView: formInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS Service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS Template ID
+        "service_yee57nk", // Replace with your EmailJS Service ID
+        "template_p3f4xri", // Replace with your EmailJS Template ID
         form.current,
-        "YOUR_PUBLIC_KEY" // Replace with your EmailJS Public Key
+        "pIXTfrmTyGQkWVEMI" // Replace with your EmailJS Public Key
       )
       .then(
         (result) => {
@@ -29,38 +46,67 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen flex items-center justify-center">
-      <form
-        ref={form}
-        onSubmit={sendEmail}
-        className="w-full max-w-lg bg-gray-100 p-8 rounded shadow-md"
-      >
-        <h2 className="text-3xl font-bold mb-6 text-center">Contact Us</h2>
-        <div className="mb-4">
-          <label className="block text-gray-700 mb-2">Your Email</label>
-          <input
-            type="email"
-            name="user_email"
-            className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-accent"
-            required
-          />
+    <div className="bg-black min-h-screen py-24 flex flex-col justify-center items-center lg:space-y-8">
+      <div className="flex flex-col lg:flex-row justify-center items-center lg:space-x-16">
+        {/* Image Section */}
+        <img
+          ref={imageRef}
+          src={`${process.env.PUBLIC_URL}/assets/PR02_Back3.png`}
+          alt="Contact"
+          className={`w-3/4 lg:w-2/3 max-w-2xl transform transition-all duration-[2000ms] ease-in-out ${
+            imageInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
+          }`}
+        />
+
+        <div className="flex flex-col items-center lg:items-start">
+          {/* Header Section */}
+          <div
+            ref={headerRef}
+            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white transform transition-all duration-[2000ms] ease-in-out ${
+              headerInView ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+            } mb-4 text-center lg:text-left`}
+          >
+            Contact
+          </div>
+
+          {/* Form Section */}
+          <form
+            ref={(el) => {
+              form.current = el;
+              formRef(el);
+            }}
+            onSubmit={sendEmail}
+            className={`w-full max-w-2xl transform transition-all duration-[2000ms] ease-in-out ${
+              formInView ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+            }`}
+          >
+            <div className="mb-4">
+              <label className="block text-white font-bold mb-2">Email</label>
+              <input
+                type="email"
+                name="user_email"
+                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-white bg-black text-white"
+                required
+              />
+            </div>
+            <div className="mb-6">
+              <label className="block text-white font-bold mb-2">Message</label>
+              <textarea
+                name="message"
+                rows="10"
+                className="w-full px-4 py-6 border rounded focus:outline-none focus:ring-2 focus:ring-white bg-black text-white"
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className="bg-white text-black px-6 py-2 rounded hover:bg-gray-200 w-full"
+            >
+              Send Message
+            </button>
+          </form>
         </div>
-        <div className="mb-6">
-          <label className="block text-gray-700 mb-2">Your Message</label>
-          <textarea
-            name="message"
-            rows="5"
-            className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-accent"
-            required
-          ></textarea>
-        </div>
-        <button
-          type="submit"
-          className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 w-full"
-        >
-          Send Message
-        </button>
-      </form>
+      </div>
     </div>
   );
 };
