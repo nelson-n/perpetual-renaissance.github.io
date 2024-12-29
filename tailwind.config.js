@@ -6,7 +6,8 @@ module.exports = {
     extend: {
       colors: {
         accent: '#FCF9F2',
-        brownAccent: '#5F352B'
+        brownAccent: '#5F352B',
+        copperAccent: '#EDAF9B'
       }
     },
   },

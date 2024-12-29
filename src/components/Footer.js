@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Contact Text Link */}
         <Link
           to="/contact"
-          className="text-brownAccent font-semibold hover:underline"
+          className="text-brownAccent text-lg font-semibold hover:underline"
         >
           Contact 
         </Link>
