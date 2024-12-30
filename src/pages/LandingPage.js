@@ -75,7 +75,7 @@ const LandingPage = () => {
         
         {/* Subtext */}
         <p className="text-lg sm:text-xl lg:text-2xl font-light text-white">
-          Combining cutting-edge materials science with a reverence for historic calibers, Perpetual Renaissance is dedicated to producing horological objects that inspire beauty.
+          Combining cutting edge materials science with a reverence for historic calibers, Perpetual Renaissance is dedicated to producing horological objects that inspire beauty.
           Designed to evoke a sense of wonder in the everyday, each watch reflects a union of artistry and performance.
       
         </p>

@@ -39,7 +39,7 @@ const PR02Page = () => {
           headerInView ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"
         }`}
       >
-        PR02
+        PR 02
       </div>
 
       {/* First Section */}
@@ -69,7 +69,7 @@ const PR02Page = () => {
           <h2 className="text-5xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
             Beauty and Performance
           </h2>
-        The flagship watch from Perpetual Renaissance, the PR02 is the ultimate expression of the brand’s dedication to beauty and performance. Crafted to seamlessly transition from the gala to the athletic arena, the slim and lightweight design of the PR02 ensure unparalleled comfort and performance. Boldly innovative, the watch features the signature cerulean tonneau case that exemplifies the Perpetual Renaissance spirit.
+        The flagship watch from Perpetual Renaissance, the PR 02 is an expression of the brand’s dedication to beauty and performance. Crafted to seamlessly transition from the gala to the athletic arena, the slim and lightweight design of the PR 02 ensures unparalleled comfort and performance. Boldly innovative, the watch features the signature cerulean case that exemplifies the Perpetual Renaissance brand.
         </div>
 
         {/* Image */}

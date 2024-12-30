@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 
 const WatchesPage = () => {
+
   {/* Section Load Triggers */}
   const { ref: imageRef, inView: imageInView } = useInView({
     triggerOnce: true,
@@ -43,7 +44,7 @@ const WatchesPage = () => {
             to="/PR02"
             className="hover:text-copperAccent transition-all duration-300"
           >
-            PR02
+            PR 02
           </Link>
         </div>
       </div>
