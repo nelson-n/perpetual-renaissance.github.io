@@ -28,22 +28,6 @@ const LandingPage = () => {
       ref={firstSectionRef}
       className="flex flex-row justify-center mt-0 items-center min-h-[50vh]"
     >
-      {/* 
-      <img
-        src={`${process.env.PUBLIC_URL}/assets/PR02_Face1.png`}
-        alt="Perpetual Renaissance"
-        className={`w-1/2 sm:w-1/2 md:w-1/2 lg:w-1/4 max-w-md transform transition-all duration-[2000ms] ease-in-out ${
-          firstSectionInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
-        }`}
-      />
-      <img
-        src={`${process.env.PUBLIC_URL}/assets/PR02_Back1.png`}
-        alt="Perpetual Renaissance"
-        className={`w-1/2 sm:w-1/2 md:w-1/2 lg:w-1/4 max-w-md transform transition-all duration-[2000ms] ease-in-out ${
-          firstSectionInView ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
-        }`}
-      />
-      */}
       <img
         src={`${process.env.PUBLIC_URL}/assets/PR02_Face5.png`}
         alt="Perpetual Renaissance"

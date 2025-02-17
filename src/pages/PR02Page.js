@@ -42,8 +42,7 @@ const PR02Page = () => {
         PR 02
       </div>
 
-
-      {/* Second Section (Black Background) */}
+      {/* First Section (Black Background) */}
       <div
         ref={secondSectionRef}
         className="bg-accent text-black flex flex-col lg:flex-row items-center justify-center w-full py-48 px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
@@ -70,7 +69,7 @@ const PR02Page = () => {
         />
       </div>
 
-      {/* Third Section */}
+      {/* Second Section */}
       <div
         ref={thirdSectionRef}
         className="bg-black text-white flex flex-col lg:flex-row items-center justify-center w-full py-48 px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
@@ -117,7 +116,7 @@ const PR02Page = () => {
       {/* Vertical Spacer */}
       <div className="h-24 lg:h-24"></div>
 
-      {/* Fourth Section */}
+      {/* Third Section */}
       <div
         ref={fourthSectionRef}
         className="bg-white text-black flex flex-col lg:flex-row items-center justify-center w-full py-0 px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
