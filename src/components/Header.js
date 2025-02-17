@@ -16,7 +16,7 @@ const Header = () => {
       <nav className="container mx-auto flex items-center justify-between py-4 px-6">
         {/* Perpetual Renaissance Text */}
         <div className="flex items-center">
-          <a href="/" onClick={() => window.location.reload()} className="text-brownAccent text-xl ml-4">
+          <a href="/" onClick={() => window.location.reload()} className="text-black text-xl ml-4">
             <span className="font-semibold">Perpetual</span>{' '}
             <span className="font-normal">Renaissance</span>
           </a>

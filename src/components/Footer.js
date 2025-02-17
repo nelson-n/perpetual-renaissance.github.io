@@ -9,12 +9,12 @@ const Footer = () => {
         {/* Contact Text Link */}
         <Link
           to="/contact"
-          className="text-brownAccent text-lg font-semibold hover:underline"
+          className="text-black text-lg font-semibold hover:underline"
         >
           Contact 
         </Link>
         {/* Copyright Text */}
-        <p className="text-brownAccent text-sm">&copy; Perpetual Renaissance</p>
+        <p className="text-black text-sm">&copy; Perpetual Renaissance</p>
       </div>
     </footer>
   );

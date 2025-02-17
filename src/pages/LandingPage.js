@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -27,8 +26,9 @@ const LandingPage = () => {
     {/* First Image Section */}
     <div
       ref={firstSectionRef}
-      className="flex flex-row justify-center mt-0 space-x-8 items-center min-h-[50vh]"
+      className="flex flex-row justify-center mt-0 items-center min-h-[50vh]"
     >
+      {/* 
       <img
         src={`${process.env.PUBLIC_URL}/assets/PR02_Face1.png`}
         alt="Perpetual Renaissance"
@@ -43,6 +43,14 @@ const LandingPage = () => {
           firstSectionInView ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
         }`}
       />
+      */}
+      <img
+        src={`${process.env.PUBLIC_URL}/assets/PR02_Face5.png`}
+        alt="Perpetual Renaissance"
+        className={`w-full max-w-6xl transform transition-all duration-[2000ms] ease-in-out ${
+          firstSectionInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
+        }`}
+      />
     </div>
 
     {/* Vertical Spacer */}
@@ -55,7 +63,7 @@ const LandingPage = () => {
     >
       {/* Image */}
       <img
-        src={`${process.env.PUBLIC_URL}/assets/PR02_Back2.png`}
+        src={`${process.env.PUBLIC_URL}/assets/PR02_Back4.png`}
         alt="Perpetual Renaissance"
         className={`w-5/6 lg:w-1/2 max-w-4xl transform transition-all duration-[2000ms] ease-in-out ${
           secondSectionInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
@@ -100,13 +108,13 @@ const LandingPage = () => {
         
         {/* Subtext */}
         <p className="text-lg sm:text-xl lg:text-2xl font-light text-black">
-        An objet d’art that stops time and stills the world to a point of clarity. <br />
+        At Perpetual Renaissance we aim to produce objets d’art that stop time and still the world to a point of clarity. Watches that both inspire beauty and are inspired by beauty. 
         </p>
       </div>
 
       {/* Image */}
       <img
-        src={`${process.env.PUBLIC_URL}/assets/PR02_Back3.png`}
+        src={`${process.env.PUBLIC_URL}/assets/PR02_Face6.png`}
         alt="Perpetual Renaissance"
         className={`w-5/6 lg:w-1/2 max-w-4xl transform transition-all duration-[2000ms] ease-in-out ${
           thirdSectionInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"

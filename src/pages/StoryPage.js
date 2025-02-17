@@ -65,7 +65,7 @@ const StoryPage = () => {
             horological art that blends the beauty and performance of modern materials science with the timeless
             elegance of historic watch calibers. At the heart of Perpetual Renaissance is its signature cerulean case,
             produced on an additive manufacturing machine designed and custom built by Nelson for this exact application. 
-            This unique creation exemplifies the brand’s ethos of constant discovery and reinvention, inspiring constant evolution 
+            This unique creation exemplifies the brand’s ethos of discovery and reinvention, inspiring constant evolution 
             and pushing the boundaries of watchmaking.
           </p>
 

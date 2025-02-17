@@ -35,30 +35,18 @@ const PR02Page = () => {
       {/* Header Section */}
       <div
         ref={headerRef}
-        className={`text-center text-8xl sm:text-8xl md:text-8xl lg:text-9xl font-bold py-12 transform transition-all duration-[2000ms] ease-in-out ${
+        className={`text-center text-8xl sm:text-8xl md:text-8xl lg:text-9xl font-bold py-6 transform transition-all duration-[2000ms] ease-in-out ${
           headerInView ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"
         }`}
       >
         PR 02
       </div>
 
-      {/* First Section */}
-      <div className="relative w-full h-screen flex justify-center items-center overflow-hidden">
-        {/* Image */}
-        <img
-          ref={firstImageRef}
-          src={`${process.env.PUBLIC_URL}/assets/PR02_Back4.png`}
-          alt="Perpetual Renaissance"
-          className={`absolute w-full h-full object-cover transform transition-all duration-[2000ms] ease-in-out ${
-            firstImageInView ? "scale-100 opacity-100" : "scale-110 opacity-0"
-          }`}
-        />
-      </div>
 
       {/* Second Section (Black Background) */}
       <div
         ref={secondSectionRef}
-        className="bg-black text-white flex flex-col lg:flex-row items-center justify-center w-full py-48 px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
+        className="bg-accent text-black flex flex-col lg:flex-row items-center justify-center w-full py-48 px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
       >
         {/* Text */}
         <div
@@ -66,15 +54,15 @@ const PR02Page = () => {
             secondSectionInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
           } max-w-prose text-center lg:text-left`}
         >
-          <h2 className="text-5xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-5xl sm:text-5xl lg:text-6xl font-bold text-black mb-6">
             Beauty and Performance
           </h2>
-        The flagship watch from Perpetual Renaissance, the PR 02 is an expression of the brand’s dedication to beauty and performance. Crafted to seamlessly transition from the gala to the athletic arena, the slim and lightweight design of the PR 02 ensures unparalleled comfort and performance. Boldly innovative, the watch features the signature cerulean case that exemplifies the Perpetual Renaissance brand.
+          The flagship watch from Perpetual Renaissance, the PR 02 is an expression of the brand's dedication to beauty and performance. Crafted to seamlessly transition from the gala to the athletic arena, the slim and lightweight design of the PR 02 ensures unparalleled comfort and performance. Boldly innovative, the watch features the signature cerulean case that exemplifies the Perpetual Renaissance brand.
         </div>
 
         {/* Image */}
         <img
-          src={`${process.env.PUBLIC_URL}/assets/PR02_Face3.png`}
+          src={`${process.env.PUBLIC_URL}/assets/PR02_Back6.png`}
           alt="Perpetual Renaissance"
           className={`w-5/6 lg:w-1/2 max-w-4xl transform transition-all duration-[2000ms] ease-in-out ${
             secondSectionInView ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
@@ -85,13 +73,13 @@ const PR02Page = () => {
       {/* Third Section */}
       <div
         ref={thirdSectionRef}
-        className="bg-white text-black flex flex-col lg:flex-row items-center justify-center w-full py-48 px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
+        className="bg-black text-white flex flex-col lg:flex-row items-center justify-center w-full py-48 px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
       >
         {/* Image */}
         <img
-          src={`${process.env.PUBLIC_URL}/assets/PR02_Face4.png`}
+          src={`${process.env.PUBLIC_URL}/assets/PR02_Face7.png`}
           alt="Perpetual Renaissance"
-          className={`w-5/6 lg:w-1/2 max-w-4xl transform transition-all duration-[2000ms] ease-in-out ${
+          className={`w-4/6 lg:w-1/3 max-w-4xl transform transition-all duration-[2000ms] ease-in-out ${
             thirdSectionInView ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
           }`}
         />
@@ -102,7 +90,7 @@ const PR02Page = () => {
             thirdSectionInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
           } max-w-prose text-center lg:text-left`}
         >
-          <h2 className="text-5xl sm:text-5xl lg:text-5xl font-bold text-black mb-6">
+          <h2 className="text-5xl sm:text-5xl lg:text-5xl font-bold text-white mb-6">
             Specifications 
           </h2>
           <div className="text-base sm:text-lg lg:text-lg">
@@ -121,10 +109,13 @@ const PR02Page = () => {
           Weight (No Strap): <span className="font-medium">15.0 g</span>
           <br />
           <br />
-          Weight (With Strap): <span className="font-medium">22.0 g</span>
+          Weight (w/ Strap): <span className="font-medium">22.0 g</span>
           </div>
         </div>
       </div>
+
+      {/* Vertical Spacer */}
+      <div className="h-24 lg:h-24"></div>
 
       {/* Fourth Section */}
       <div
@@ -133,7 +124,7 @@ const PR02Page = () => {
       >
         {/* Image */}
         <img
-          src={`${process.env.PUBLIC_URL}/assets/PR02_Back5.png`}
+          src={`${process.env.PUBLIC_URL}/assets/PR02_Back3.png`}
           alt="Perpetual Renaissance"
           className={`w-5/6 lg:w-1/2 max-w-4xl transform transition-all duration-[2000ms] ease-in-out ${
             fourthSectionInView ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
@@ -160,7 +151,6 @@ const PR02Page = () => {
           <br />
           <br />
           Jewels: <span className="font-medium">17</span>
-
         </div>
         </div>
       </div>
