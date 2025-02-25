@@ -1,22 +1,64 @@
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Close menu when location changes
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location]);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+  // Animation variants
+  const menuVariants = {
+    closed: {
+      opacity: 0,
+      y: -20,
+      transition: {
+        duration: 0.4,
+        ease: "easeInOut"
+      }
+    },
+    open: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        ease: "easeInOut",
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const linkVariants = {
+    closed: { opacity: 0, x: -20 },
+    open: { opacity: 1, x: 0 }
+  };
+
   return (
-    <header className="bg-accent shadow">
-      <nav className="container mx-auto flex items-center justify-between py-4 px-6">
+    <header className={`bg-accent shadow fixed w-full z-50 transition-all duration-300 ${scrolled ? "py-2" : "py-4"}`}>
+      <nav className="container mx-auto flex items-center justify-between px-6">
         {/* Perpetual Renaissance Text */}
         <div className="flex items-center">
-          <a href="/" onClick={() => window.location.reload()} className="text-black text-xl ml-4">
+          <a href="/" onClick={() => window.location.reload()} className="text-black text-xl">
             <span className="font-semibold">Perpetual</span>{' '}
             <span className="font-normal">Renaissance</span>
           </a>
@@ -31,7 +73,7 @@ const Header = () => {
             className={`text-lg font-light transition-colors duration-300 ${
               location.pathname === "/"
                 ? "text-black"
-                : "text-brownAccent hover:text-black"
+                : "text-black hover:text-gray-700"
             }`}
           >
             Welcome
@@ -41,7 +83,7 @@ const Header = () => {
             className={`text-lg font-light transition-colors duration-300 ${
               location.pathname === "/watches"
                 ? "text-black"
-                : "text-brownAccent hover:text-black"
+                : "text-black hover:text-gray-700"
             }`}
           >
             Watches
@@ -51,69 +93,107 @@ const Header = () => {
             className={`text-lg font-light transition-colors duration-300 ${
               location.pathname === "/story"
                 ? "text-black"
-                : "text-brownAccent hover:text-black"
+                : "text-black hover:text-gray-700"
             }`}
           >
             Story
           </Link>
         </div>
 
-        {/* Mobile Navigation Links */}
+        {/* Mobile Menu Button */}
         <div className="lg:hidden">
           <button
-            className="text-brownAccent text-2xl focus:outline-none"
+            className="text-black text-2xl focus:outline-none"
             onClick={toggleMenu}
+            aria-label="Toggle menu"
           >
-            {menuOpen ? <FaTimes /> : <FaBars />}
+            <FaBars />
           </button>
         </div>
-
-        {menuOpen && (
-          <div className="lg:hidden fixed top-0 right-0 h-full w-1/3 bg-white shadow-lg z-50">
-            <button
-              onClick={toggleMenu}
-              className="absolute top-4 right-4 text-brownAccent text-2xl focus:outline-none"
-            >
-              <FaTimes />
-            </button>
-            <div className="flex flex-col items-start mt-20 space-y-4 px-6">
-              <Link
-                to="/"
-                onClick={() => setMenuOpen(false)}
-                className={`text-lg font-normal transition-colors duration-300 ${
-                  location.pathname === "/"
-                    ? "text-black"
-                    : "text-brownAccent hover:text-black"
-                }`}
-              >
-                Welcome
-              </Link>
-              <Link
-                to="/watches"
-                onClick={() => setMenuOpen(false)}
-                className={`text-lg font-normal transition-colors duration-300 ${
-                  location.pathname === "/watches"
-                    ? "text-black"
-                    : "text-brownAccent hover:text-black"
-                }`}
-              >
-                Watches
-              </Link>
-              <Link
-                to="/story"
-                onClick={() => setMenuOpen(false)}
-                className={`text-lg font-normal transition-colors duration-300 ${
-                  location.pathname === "/story"
-                    ? "text-black"
-                    : "text-brownAccent hover:text-black"
-                }`}
-              >
-                Story
-              </Link>
-            </div>
-          </div>
-        )}
       </nav>
+
+      {/* Mobile Navigation - Animated Overlay */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
+            onClick={() => setMenuOpen(false)}
+          >
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "tween", duration: 0.4 }}
+              className="absolute top-0 right-0 h-full w-64 bg-white shadow-lg z-50"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="p-6">
+                <div className="flex justify-end mb-8">
+                  <button
+                    onClick={() => setMenuOpen(false)}
+                    className="text-black focus:outline-none"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                
+                <motion.div
+                  variants={menuVariants}
+                  initial="closed"
+                  animate="open"
+                  exit="closed"
+                  className="flex flex-col space-y-6"
+                >
+                  <motion.div variants={linkVariants}>
+                    <Link
+                      to="/"
+                      className={`block text-xl font-light transition-colors duration-300 ${
+                        location.pathname === "/"
+                          ? "text-black"
+                          : "text-black hover:text-gray-700"
+                      }`}
+                    >
+                      Welcome
+                    </Link>
+                  </motion.div>
+                  
+                  <motion.div variants={linkVariants}>
+                    <Link
+                      to="/watches"
+                      className={`block text-xl font-light transition-colors duration-300 ${
+                        location.pathname === "/watches"
+                          ? "text-black"
+                          : "text-black hover:text-gray-700"
+                      }`}
+                    >
+                      Watches
+                    </Link>
+                  </motion.div>
+                  
+                  <motion.div variants={linkVariants}>
+                    <Link
+                      to="/story"
+                      className={`block text-xl font-light transition-colors duration-300 ${
+                        location.pathname === "/story"
+                          ? "text-black"
+                          : "text-black hover:text-gray-700"
+                      }`}
+                    >
+                      Story
+                    </Link>
+                  </motion.div>
+                </motion.div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
