@@ -23,6 +23,9 @@ const LandingPage = () => {
     {/* Vertical Spacer */}
     <div className="h-16 lg:h-16"></div>
 
+    {/* Vertical Spacer */}
+    <div className="h-16 lg:h-16"></div>
+
     {/* First Image Section */}
     <div
       ref={firstSectionRef}

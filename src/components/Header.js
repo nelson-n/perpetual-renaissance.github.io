@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaBars } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
@@ -54,7 +53,7 @@ const Header = () => {
   };
 
   return (
-    <header className={`bg-accent shadow fixed w-full z-50 transition-all duration-300 ${scrolled ? "py-2" : "py-4"}`}>
+    <header className={`bg-accent fixed w-full z-50 transition-all duration-300 ${scrolled ? "py-2" : "py-4"}`}>
       <nav className="container mx-auto flex items-center justify-between px-6">
         {/* Perpetual Renaissance Text */}
         <div className="flex items-center">
@@ -100,14 +99,23 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button - Plus Sign */}
         <div className="lg:hidden">
           <button
-            className="text-black text-2xl focus:outline-none"
+            className="text-black focus:outline-none w-8 h-8 relative"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
-            <FaBars />
+            <motion.span
+              animate={{ rotate: menuOpen ? 135 : 0 }}
+              transition={{ duration: 0.3 }}
+              className="absolute w-6 h-0.5 bg-black top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            ></motion.span>
+            <motion.span
+              animate={{ rotate: menuOpen ? 0 : 90, opacity: menuOpen ? 1 : 1 }}
+              transition={{ duration: 0.3 }}
+              className="absolute w-6 h-0.5 bg-black top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            ></motion.span>
           </button>
         </div>
       </nav>
@@ -128,27 +136,16 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "tween", duration: 0.4 }}
-              className="absolute top-0 right-0 h-full w-64 bg-white shadow-lg z-50"
+              className="absolute top-0 right-0 h-full w-40 bg-white z-50"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="p-6">
-                <div className="flex justify-end mb-8">
-                  <button
-                    onClick={() => setMenuOpen(false)}
-                    className="text-black focus:outline-none"
-                  >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
-                
                 <motion.div
                   variants={menuVariants}
                   initial="closed"
                   animate="open"
                   exit="closed"
-                  className="flex flex-col space-y-6"
+                  className="flex flex-col space-y-6 mt-10"
                 >
                   <motion.div variants={linkVariants}>
                     <Link

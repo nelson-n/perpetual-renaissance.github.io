@@ -35,7 +35,7 @@ const PR02Page = () => {
       {/* Header Section */}
       <div
         ref={headerRef}
-        className={`text-center text-8xl sm:text-8xl md:text-8xl lg:text-9xl font-bold py-6 transform transition-all duration-[2000ms] ease-in-out ${
+        className={`text-center text-9xl sm:text-9xl md:text-9xl lg:text-10xl font-bold pt-20 transform transition-all duration-[2000ms] ease-in-out ${
           headerInView ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"
         }`}
       >
