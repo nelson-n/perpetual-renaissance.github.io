@@ -42,10 +42,10 @@ const PR02Page = () => {
         PR 02
       </div>
 
-      {/* First Section (Black Background) */}
+      {/* First Section (Burgundy Background) */}
       <div
         ref={secondSectionRef}
-        className="bg-accent text-black flex flex-col lg:flex-row items-center justify-center w-full px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
+        className="bg-burgundy text-accent flex flex-col lg:flex-row items-center justify-center w-full px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
       >
         {/* Text */}
         <div
@@ -53,7 +53,7 @@ const PR02Page = () => {
             secondSectionInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
           } max-w-prose text-center lg:text-left`}
         >
-          <h2 className="text-5xl sm:text-5xl lg:text-6xl font-bold text-black mb-6">
+          <h2 className="text-5xl sm:text-5xl lg:text-6xl font-bold text-accent mb-6">
             Beauty and Performance
           </h2>
           The flagship watch from Perpetual Renaissance, the PR 02 is an expression of the brand's dedication to beauty and performance. Crafted to seamlessly transition from the gala to the athletic arena, the slim and lightweight design of the PR 02 ensures unparalleled comfort and performance. Boldly innovative, the watch features the signature cerulean case that exemplifies the Perpetual Renaissance brand.
@@ -72,7 +72,7 @@ const PR02Page = () => {
       {/* Second Section */}
       <div
         ref={thirdSectionRef}
-        className="bg-black text-white flex flex-col lg:flex-row items-center justify-center w-full px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
+        className="bg-gray-200 text-black flex flex-col lg:flex-row items-center justify-center w-full px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
       >
         {/* Image */}
         <img
@@ -89,7 +89,7 @@ const PR02Page = () => {
             thirdSectionInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
           } max-w-prose text-center lg:text-left`}
         >
-          <h2 className="text-5xl sm:text-5xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-5xl sm:text-5xl lg:text-5xl font-bold text-black mb-6">
             Specifications 
           </h2>
           <div className="text-base sm:text-lg lg:text-lg">
@@ -116,7 +116,7 @@ const PR02Page = () => {
       {/* Third Section */}
       <div
         ref={fourthSectionRef}
-        className="bg-white text-black flex flex-col lg:flex-row items-center justify-center w-full py-0 px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
+        className="bg-black text-white flex flex-col lg:flex-row items-center justify-center w-full py-0 px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
       >
         {/* Image */}
         <img
@@ -133,7 +133,7 @@ const PR02Page = () => {
             fourthSectionInView ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
           } max-w-prose text-center lg:text-left`}
         >
-          <h2 className="text-5xl sm:text-5xl lg:text-6xl font-bold text-black mb-6">
+          <h2 className="text-5xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
             Movement
           </h2>
           <div className="text-base sm:text-lg lg:text-lg">
