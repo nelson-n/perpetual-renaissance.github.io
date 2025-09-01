@@ -113,9 +113,6 @@ const PR02Page = () => {
         </div>
       </div>
 
-      {/* Vertical Spacer */}
-      <div className="h-24 lg:h-24"></div>
-
       {/* Third Section */}
       <div
         ref={fourthSectionRef}
