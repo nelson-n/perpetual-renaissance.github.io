@@ -61,7 +61,7 @@ const PR02Page = () => {
 
         {/* Image */}
         <img
-          src={`${process.env.PUBLIC_URL}/assets/PR02_Back6.png`}
+          src={`${process.env.PUBLIC_URL}/assets/PR02_COE_HAND1.jpg`}
           alt="Perpetual Renaissance"
           className={`w-5/6 lg:w-1/2 max-w-4xl transform transition-all duration-[2000ms] ease-in-out ${
             secondSectionInView ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
@@ -76,7 +76,7 @@ const PR02Page = () => {
       >
         {/* Image */}
         <img
-          src={`${process.env.PUBLIC_URL}/assets/PR02_Face7.png`}
+          src={`${process.env.PUBLIC_URL}/assets/PR02_COE_FACE4.jpg`}
           alt="Perpetual Renaissance"
           className={`w-4/6 lg:w-1/3 max-w-4xl transform transition-all duration-[2000ms] ease-in-out ${
             thirdSectionInView ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
@@ -123,7 +123,7 @@ const PR02Page = () => {
       >
         {/* Image */}
         <img
-          src={`${process.env.PUBLIC_URL}/assets/PR02_Back3.png`}
+          src={`${process.env.PUBLIC_URL}/assets/PR02_COE_BACK1.png`}
           alt="Perpetual Renaissance"
           className={`w-5/6 lg:w-1/2 max-w-4xl transform transition-all duration-[2000ms] ease-in-out ${
             fourthSectionInView ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"

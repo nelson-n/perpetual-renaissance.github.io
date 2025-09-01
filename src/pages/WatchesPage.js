@@ -25,7 +25,7 @@ const WatchesPage = () => {
         {/* PR02 Image */}
         <Link to="/PR02" ref={imageRef} className="flex justify-center items-center">
           <img
-            src={`${process.env.PUBLIC_URL}/assets/PR02_Back3.png`}
+            src={`${process.env.PUBLIC_URL}/assets/PR02_COE_SIDE1.jpg`}
             alt="Perpetual Renaissance"
             className={`w-5/6 lg:w-1/2 max-w-none transform transition-all duration-[2000ms] ease-in-out hover:shadow-2xl cursor-pointer ${
               imageInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
