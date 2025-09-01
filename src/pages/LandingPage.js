@@ -46,7 +46,7 @@ const LandingPage = () => {
     {/* Second Image Section (Black) */}
     <div
       ref={secondSectionRef}
-      className="bg-black text-accent flex flex-col lg:flex-row justify-center items-center w-full py-48 px-4 lg:px-16 lg:space-x-24"
+      className="bg-black text-accent flex flex-col lg:flex-row justify-center items-center w-full px-4 lg:px-16 lg:space-x-24"
     >
       {/* Image */}
       <img
