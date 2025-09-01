@@ -32,7 +32,7 @@ const LandingPage = () => {
       className="flex flex-row justify-center mt-0 items-center min-h-[50vh]"
     >
       <img
-        src={`${process.env.PUBLIC_URL}/assets/PR02_COE_FACE1.png`}
+        src={`${process.env.PUBLIC_URL}/assets/PR02_COE_FACE1.jpg`}
         alt="Perpetual Renaissance"
         className={`w-full max-w-6xl transform transition-all duration-[2000ms] ease-in-out ${
           firstSectionInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
@@ -50,7 +50,7 @@ const LandingPage = () => {
     >
       {/* Image */}
       <img
-        src={`${process.env.PUBLIC_URL}/assets/PR02_COE_FACE2.png`}
+        src={`${process.env.PUBLIC_URL}/assets/PR02_COE_FACE2.jpg`}
         alt="Perpetual Renaissance"
         className={`w-5/6 lg:w-1/2 max-w-4xl transform transition-all duration-[2000ms] ease-in-out ${
           secondSectionInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
@@ -101,7 +101,7 @@ const LandingPage = () => {
 
       {/* Image */}
       <img
-        src={`${process.env.PUBLIC_URL}/assets/PR02_COE_FACE3.png`}
+        src={`${process.env.PUBLIC_URL}/assets/PR02_COE_FACE3.jpg`}
         alt="Perpetual Renaissance"
         className={`w-5/6 lg:w-1/2 max-w-4xl transform transition-all duration-[2000ms] ease-in-out ${
           thirdSectionInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
