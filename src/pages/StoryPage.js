@@ -28,7 +28,7 @@ const StoryPage = () => {
         {/* Image Section */}
         <img
           ref={imageRef}
-          src={`${process.env.PUBLIC_URL}/assets/FounderPhoto.png`}
+          src={`${process.env.PUBLIC_URL}/assets/COE_FOUNDER_PHOTO.jpg`}
           alt="Perpetual Renaissance"
           className={`w-full sm:w-3/4 lg:w-2/3 max-w-lg transform transition-all duration-[2000ms] ease-in-out ${
             imageInView
