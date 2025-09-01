@@ -89,7 +89,7 @@ const LandingPage = () => {
         } max-w-prose`}
       >
         {/* Header */}
-        <h2 className="text-5xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-burgundy mb-4">
+        <h2 className="text-5xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-black mb-4">
           Inspired by Beauty
         </h2>
         

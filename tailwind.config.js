@@ -9,7 +9,8 @@ module.exports = {
         brownAccent: '#5F352B',
         copperAccent: '#EDAF9B',
         burgundy: '#6F2637',
-        lightGray: '#BEBDC1'
+        lightGray: '#BEBDC1',
+        gray: '#ACACAC'
       }
     },
   },
