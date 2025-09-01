@@ -45,7 +45,7 @@ const PR02Page = () => {
       {/* First Section (Black Background) */}
       <div
         ref={secondSectionRef}
-        className="bg-accent text-black flex flex-col lg:flex-row items-center justify-center w-full py-48 px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
+        className="bg-accent text-black flex flex-col lg:flex-row items-center justify-center w-full px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
       >
         {/* Text */}
         <div
@@ -72,7 +72,7 @@ const PR02Page = () => {
       {/* Second Section */}
       <div
         ref={thirdSectionRef}
-        className="bg-black text-white flex flex-col lg:flex-row items-center justify-center w-full py-48 px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
+        className="bg-black text-white flex flex-col lg:flex-row items-center justify-center w-full px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
       >
         {/* Image */}
         <img
@@ -123,7 +123,7 @@ const PR02Page = () => {
       >
         {/* Image */}
         <img
-          src={`${process.env.PUBLIC_URL}/assets/PR02_COE_BACK1.png`}
+          src={`${process.env.PUBLIC_URL}/assets/PR02_COE_BACK1.jpg`}
           alt="Perpetual Renaissance"
           className={`w-5/6 lg:w-1/2 max-w-4xl transform transition-all duration-[2000ms] ease-in-out ${
             fourthSectionInView ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"

@@ -89,13 +89,13 @@ const LandingPage = () => {
         } max-w-prose`}
       >
         {/* Header */}
-        <h2 className="text-5xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-black mb-4">
+        <h2 className="text-5xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-burgundy mb-4">
           Inspired by Beauty
         </h2>
         
         {/* Subtext */}
-        <p className="text-lg sm:text-xl lg:text-2xl font-light text-black">
-        At Perpetual Renaissance we aim to produce objets d’art that stop time and still the world to a point of clarity. Watches that both inspire beauty and are inspired by beauty. 
+        <p className="text-lg sm:text-xl lg:text-2xl font-light text-burgundy">
+        At Perpetual Renaissance we aim to produce objets d'art that stop time and still the world to a point of clarity. Watches that both inspire beauty and are inspired by beauty. 
         </p>
       </div>
 

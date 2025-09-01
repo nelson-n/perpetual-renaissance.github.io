@@ -71,7 +71,7 @@ const Header = () => {
             to="/"
             className={`text-lg font-light transition-colors duration-300 ${
               location.pathname === "/"
-                ? "text-black"
+                ? "text-burgundy"
                 : "text-black hover:text-gray-700"
             }`}
           >
@@ -81,7 +81,7 @@ const Header = () => {
             to="/watches"
             className={`text-lg font-light transition-colors duration-300 ${
               location.pathname === "/watches"
-                ? "text-black"
+                ? "text-burgundy"
                 : "text-black hover:text-gray-700"
             }`}
           >
@@ -91,7 +91,7 @@ const Header = () => {
             to="/story"
             className={`text-lg font-light transition-colors duration-300 ${
               location.pathname === "/story"
-                ? "text-black"
+                ? "text-burgundy"
                 : "text-black hover:text-gray-700"
             }`}
           >
@@ -152,7 +152,7 @@ const Header = () => {
                       to="/"
                       className={`block text-xl font-light transition-colors duration-300 ${
                         location.pathname === "/"
-                          ? "text-black"
+                          ? "text-burgundy"
                           : "text-black hover:text-gray-700"
                       }`}
                     >
@@ -165,7 +165,7 @@ const Header = () => {
                       to="/watches"
                       className={`block text-xl font-light transition-colors duration-300 ${
                         location.pathname === "/watches"
-                          ? "text-black"
+                          ? "text-burgundy"
                           : "text-black hover:text-gray-700"
                       }`}
                     >
@@ -178,7 +178,7 @@ const Header = () => {
                       to="/story"
                       className={`block text-xl font-light transition-colors duration-300 ${
                         location.pathname === "/story"
-                          ? "text-black"
+                          ? "text-burgundy"
                           : "text-black hover:text-gray-700"
                       }`}
                     >

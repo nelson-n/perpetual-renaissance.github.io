@@ -7,7 +7,8 @@ module.exports = {
       colors: {
         accent: '#FCF9F2',
         brownAccent: '#5F352B',
-        copperAccent: '#EDAF9B'
+        copperAccent: '#EDAF9B',
+        burgundy: '#763642'
       }
     },
   },
