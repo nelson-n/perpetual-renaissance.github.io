@@ -50,6 +50,11 @@
   animation: quarter-circle-oscillation 0.7s infinite ease-in-out;
 }
 
+/* Additional classes for ImagePreloader */
+.oscillate {
+  animation: quarter-circle-oscillation 0.7s infinite ease-in-out;
+}
+
 /* Keyframes for balance wheel oscillation */
 @keyframes balance-oscillation {
   0%, 100% {

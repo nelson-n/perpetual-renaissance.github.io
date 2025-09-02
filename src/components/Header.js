@@ -89,11 +89,7 @@ const Header = () => {
           </Link>
           <Link
             to="/story"
-            className={`text-lg font-light transition-colors duration-300 ${
-              location.pathname === "/story"
-                ? "text-burgundy"
-                : "text-black hover:text-gray-700"
-            }`}
+            className="text-lg font-light transition-colors duration-300 text-burgundy hover:text-copperAccent"
           >
             Story
           </Link>
@@ -176,11 +172,7 @@ const Header = () => {
                   <motion.div variants={linkVariants}>
                     <Link
                       to="/story"
-                      className={`block text-xl font-light transition-colors duration-300 ${
-                        location.pathname === "/story"
-                          ? "text-burgundy"
-                          : "text-black hover:text-gray-700"
-                      }`}
+                      className="block text-xl font-light transition-colors duration-300 text-burgundy hover:text-copperAccent"
                     >
                       Story
                     </Link>

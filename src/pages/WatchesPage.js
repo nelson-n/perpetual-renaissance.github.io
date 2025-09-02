@@ -50,7 +50,7 @@ const WatchesPage = () => {
         {/* PR02 Text Overlay */}
         <div
           ref={textRef}
-          className={`absolute inset-0 flex justify-center items-center text-white font-bold text-8xl sm:text-8xl md:text-8xl lg:text-9xl transform transition-all duration-[2000ms] ease-in-out ${
+          className={`absolute top-1/4 left-0 right-0 flex justify-center items-center text-white font-bold text-8xl sm:text-8xl md:text-8xl lg:text-9xl transform transition-all duration-[2000ms] ease-in-out ${
             textInView ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
           }`}
         >
