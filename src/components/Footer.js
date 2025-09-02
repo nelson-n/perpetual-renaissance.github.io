@@ -9,12 +9,22 @@ const Footer = () => {
         {/* Contact Text Link */}
         <Link
           to="/contact"
-          className="text-black text-lg font-semibold hover:underline"
+          className="text-black text-lg font-semibold hover:text-burgundy transition-all duration-100"
         >
           Contact 
         </Link>
         {/* Copyright Text */}
-        <p className="text-black text-sm">&copy; Perpetual Renaissance</p>
+        <p className="text-black text-sm">
+          &copy; Perpetual Renaissance | Photos by{' '}
+          <a 
+            href="https://www.chriscoephoto.com/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-black hover:text-burgundy transition-all duration-100"
+          >
+            Chris Coe
+          </a>
+        </p>
       </div>
     </footer>
   );

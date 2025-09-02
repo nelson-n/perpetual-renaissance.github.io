@@ -42,7 +42,7 @@ const StoryPage = () => {
           {/* Story Header */}
           <div
             ref={headerRef}
-            className={`text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-bold text-burgundy transform transition-all duration-[2000ms] ease-in-out ${
+            className={`text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-bold text-black transform transition-all duration-[2000ms] ease-in-out ${
               headerInView
                 ? "translate-x-0 opacity-100"
                 : "translate-x-[50vw] sm:translate-x-full opacity-0"
@@ -71,7 +71,7 @@ const StoryPage = () => {
 
           {/* Contact Link */}
           <Link
-            className={`mt-4 text-burgundy text-lg sm:text-xl lg:text-xl font-bold hover:underline transform transition-all duration-[2000ms] ease-in-out ${
+            className={`mt-4 text-black text-lg sm:text-xl lg:text-xl font-bold hover:text-burgundy transition-all duration-100 transform transition-all duration-[2000ms] ease-in-out ${
               textInView
                 ? "translate-x-0 opacity-100"
                 : "translate-x-[50vw] sm:translate-x-full opacity-0"

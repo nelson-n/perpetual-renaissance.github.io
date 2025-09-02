@@ -62,7 +62,7 @@ const ContactPage = () => {
           {/* Header Section */}
           <div
             ref={headerRef}
-            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white transform transition-all duration-[2000ms] ease-in-out ${
+            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-copperAccent transform transition-all duration-[2000ms] ease-in-out ${
               headerInView ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
             } mb-4 text-center lg:text-left`}
           >

@@ -61,7 +61,7 @@ const PR02Page = () => {
       {/* First Section (Gray Background) */}
       <div
         ref={secondSectionRef}
-        className="bg-gray-200 text-black flex flex-col lg:flex-row items-center justify-center w-full px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
+        className="bg-accent text-black flex flex-col lg:flex-row items-center justify-center w-full px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
       >
         {/* Text */}
         <div
@@ -72,7 +72,7 @@ const PR02Page = () => {
           <h2 className="text-5xl sm:text-5xl lg:text-6xl font-bold text-black mb-6">
             Beauty and Performance
           </h2>
-          The flagship watch from Perpetual Renaissance, the PR 02 is an expression of the brand's dedication to beauty and performance. Crafted to seamlessly transition from the gala to the athletic arena, the slim and lightweight design of the PR 02 ensures unparalleled comfort and performance. Boldly innovative, the watch features the signature cerulean case that exemplifies the Perpetual Renaissance brand.
+          The flagship watch from Perpetual Renaissance, the PR 02 is an expression of the brand's dedication to beauty and performance. The slim and lightweight design of the PR 02 ensures unparalleled comfort and performance while the signature cerulean case exemplifies the Perpetual Renaissance brand.
         </div>
 
         {/* Image */}
@@ -88,7 +88,7 @@ const PR02Page = () => {
       {/* Second Section */}
       <div
         ref={thirdSectionRef}
-        className="bg-white text-black flex flex-col lg:flex-row items-center justify-center w-full px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
+        className="bg-black text-white flex flex-col lg:flex-row items-center justify-center w-full px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
       >
         {/* Image */}
         <img
@@ -105,7 +105,7 @@ const PR02Page = () => {
             thirdSectionInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
           } max-w-prose text-center lg:text-left`}
         >
-          <h2 className="text-5xl sm:text-5xl lg:text-5xl font-bold text-black mb-6">
+          <h2 className="text-5xl sm:text-5xl lg:text-5xl font-bold text-white mb-6">
             Specifications 
           </h2>
           <div className="text-base sm:text-lg lg:text-lg">

@@ -70,9 +70,7 @@ const Header = () => {
           <Link
             to="/"
             className={`text-lg font-light transition-colors duration-300 ${
-              location.pathname === "/"
-                ? "text-burgundy"
-                : "text-black hover:text-gray-700"
+              location.pathname === "/" ? "text-burgundy" : "text-black hover:text-burgundy"
             }`}
           >
             Welcome
@@ -80,16 +78,16 @@ const Header = () => {
           <Link
             to="/watches"
             className={`text-lg font-light transition-colors duration-300 ${
-              location.pathname === "/watches"
-                ? "text-burgundy"
-                : "text-black hover:text-gray-700"
+              location.pathname === "/watches" || location.pathname === "/PR02" ? "text-burgundy" : "text-black hover:text-burgundy"
             }`}
           >
             Watches
           </Link>
           <Link
             to="/story"
-            className="text-lg font-light transition-colors duration-300 text-burgundy hover:text-copperAccent"
+            className={`text-lg font-light transition-colors duration-300 ${
+              location.pathname === "/story" ? "text-burgundy" : "text-black hover:text-burgundy"
+            }`}
           >
             Story
           </Link>
@@ -147,9 +145,7 @@ const Header = () => {
                     <Link
                       to="/"
                       className={`block text-xl font-light transition-colors duration-300 ${
-                        location.pathname === "/"
-                          ? "text-burgundy"
-                          : "text-black hover:text-gray-700"
+                        location.pathname === "/" ? "text-burgundy" : "text-black hover:text-burgundy"
                       }`}
                     >
                       Welcome
@@ -160,9 +156,7 @@ const Header = () => {
                     <Link
                       to="/watches"
                       className={`block text-xl font-light transition-colors duration-300 ${
-                        location.pathname === "/watches"
-                          ? "text-burgundy"
-                          : "text-black hover:text-gray-700"
+                        location.pathname === "/watches" || location.pathname === "/PR02" ? "text-burgundy" : "text-black hover:text-burgundy"
                       }`}
                     >
                       Watches
@@ -172,7 +166,9 @@ const Header = () => {
                   <motion.div variants={linkVariants}>
                     <Link
                       to="/story"
-                      className="block text-xl font-light transition-colors duration-300 text-burgundy hover:text-copperAccent"
+                      className={`block text-xl font-light transition-colors duration-300 ${
+                        location.pathname === "/story" ? "text-burgundy" : "text-black hover:text-burgundy"
+                      }`}
                     >
                       Story
                     </Link>
