@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-accent text-black py-4">
-      <div className="container mx-auto flex justify-between items-center px-6">
+      <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center px-6 space-y-2 sm:space-y-0">
         {/* Contact Text Link */}
         <Link
           to="/contact"
@@ -14,7 +14,7 @@ const Footer = () => {
           Contact 
         </Link>
         {/* Copyright Text */}
-        <p className="text-black text-sm">
+        <p className="text-black text-sm text-center sm:text-left">
           &copy; Perpetual Renaissance | Photos by{' '}
           <a 
             href="https://www.chriscoephoto.com/" 

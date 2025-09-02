@@ -2,8 +2,17 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
+import useImagePreloader from "../hooks/useImagePreloader";
+import ImagePreloader from "../components/ImagePreloader";
 
 const StoryPage = () => {
+  // Image URLs to preload
+  const imageUrls = [
+    `${process.env.PUBLIC_URL}/assets/COE_FOUNDER_PHOTO.jpg`
+  ];
+
+  // Use image preloader hook
+  const { imagesLoaded, loadingProgress } = useImagePreloader(imageUrls);
 
   {/* Section Load Triggers */}
   const { ref: headerRef, inView: headerInView } = useInView({
@@ -20,6 +29,11 @@ const StoryPage = () => {
     triggerOnce: true,
     threshold: 0.1, 
   });
+
+  // Show loading spinner until all images are loaded
+  if (!imagesLoaded) {
+    return <ImagePreloader loadingProgress={loadingProgress} />;
+  }
 
   return (
     <div className="bg-white min-h-screen py-16 px-4 lg:px-24 flex flex-col justify-center items-center overflow-visible">
