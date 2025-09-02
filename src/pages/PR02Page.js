@@ -1,7 +1,18 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
+import useImagePreloader from "../hooks/useImagePreloader";
+import ImagePreloader from "../components/ImagePreloader";
 
 const PR02Page = () => {
+  // Image URLs to preload
+  const imageUrls = [
+    `${process.env.PUBLIC_URL}/assets/PR02_COE_HAND1.jpg`,
+    `${process.env.PUBLIC_URL}/assets/PR02_COE_FACE4.jpg`,
+    `${process.env.PUBLIC_URL}/assets/PR02_COE_BACK1.jpg`
+  ];
+
+  // Use image preloader hook
+  const { imagesLoaded, loadingProgress } = useImagePreloader(imageUrls);
 
   {/* Section Load Triggers */}
   const { ref: headerRef, inView: headerInView } = useInView({
@@ -28,6 +39,11 @@ const PR02Page = () => {
     triggerOnce: true,
     threshold: 0.2,
   });
+
+  // Show loading spinner until all images are loaded
+  if (!imagesLoaded) {
+    return <ImagePreloader loadingProgress={loadingProgress} />;
+  }
 
   return (
     <div className="bg-white text-black font-sans">

@@ -1,7 +1,18 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
+import useImagePreloader from "../hooks/useImagePreloader";
+import ImagePreloader from "../components/ImagePreloader";
 
 const LandingPage = () => {
+  // Image URLs to preload
+  const imageUrls = [
+    `${process.env.PUBLIC_URL}/assets/PR02_COE_FACE1.jpg`,
+    `${process.env.PUBLIC_URL}/assets/PR02_COE_FACE2.jpg`,
+    `${process.env.PUBLIC_URL}/assets/PR02_COE_FACE3.jpg`
+  ];
+
+  // Use image preloader hook
+  const { imagesLoaded, loadingProgress } = useImagePreloader(imageUrls);
 
   {/* Section Load Triggers */}
   const { ref: firstSectionRef, inView: firstSectionInView } = useInView({
@@ -16,6 +27,11 @@ const LandingPage = () => {
     triggerOnce: true,
     threshold: 0.2,
   });
+
+  // Show loading spinner until all images are loaded
+  if (!imagesLoaded) {
+    return <ImagePreloader loadingProgress={loadingProgress} />;
+  }
 
   return (
     <div className="bg-white text-black font-sans">
@@ -94,7 +110,7 @@ const LandingPage = () => {
         </h2>
         
         {/* Subtext */}
-        <p className="text-lg sm:text-xl lg:text-2xl font-light text-burgundy">
+        <p className="text-lg sm:text-xl lg:text-2xl font-light text-black">
         At Perpetual Renaissance we aim to produce objets d'art that stop time and still the world to a point of clarity. Watches that both inspire beauty and are inspired by beauty. 
         </p>
       </div>
@@ -103,7 +119,7 @@ const LandingPage = () => {
       <img
         src={`${process.env.PUBLIC_URL}/assets/PR02_COE_FACE3.jpg`}
         alt="Perpetual Renaissance"
-        className={`w-5/6 lg:w-1/2 max-w-4xl transform transition-all duration-[2000ms] ease-in-out ${
+        className={`w-5/6 lg:w-2/3 max-w-5xl transform transition-all duration-[2000ms] ease-in-out ${
           thirdSectionInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
         }`}
       />

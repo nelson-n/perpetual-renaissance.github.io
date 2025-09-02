@@ -51,7 +51,7 @@ const ContactPage = () => {
         {/* Image Section */}
         <img
           ref={imageRef}
-          src={`${process.env.PUBLIC_URL}/assets/PR02_COE_PERSON1.png`}
+          src={`${process.env.PUBLIC_URL}/assets/PR02_COE_PERSON1.jpg`}
           alt="Contact"
           className={`w-3/4 lg:w-2/3 max-w-2xl transform transition-all duration-[2000ms] ease-in-out ${
             imageInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"

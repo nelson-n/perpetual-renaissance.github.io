@@ -2,8 +2,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
+import useImagePreloader from "../hooks/useImagePreloader";
+import ImagePreloader from "../components/ImagePreloader";
 
 const WatchesPage = () => {
+  // Image URLs to preload
+  const imageUrls = [
+    `${process.env.PUBLIC_URL}/assets/PR02_COE_SIDE1.jpg`
+  ];
+
+  // Use image preloader hook
+  const { imagesLoaded, loadingProgress } = useImagePreloader(imageUrls);
 
   {/* Section Load Triggers */}
   const { ref: imageRef, inView: imageInView } = useInView({
@@ -15,6 +24,11 @@ const WatchesPage = () => {
     triggerOnce: true,
     threshold: 0.2,
   });
+
+  // Show loading spinner until all images are loaded
+  if (!imagesLoaded) {
+    return <ImagePreloader loadingProgress={loadingProgress} />;
+  }
 
   return (
     <div className="bg-black min-h-screen flex justify-center items-center">
