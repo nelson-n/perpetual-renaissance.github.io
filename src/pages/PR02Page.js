@@ -88,7 +88,7 @@ const PR02Page = () => {
       {/* Second Section */}
       <div
         ref={thirdSectionRef}
-        className="bg-black text-white flex flex-col lg:flex-row items-center justify-center w-full px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
+        className="bg-black text-copperAccent flex flex-col lg:flex-row items-center justify-center w-full px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
       >
         {/* Image */}
         <img
@@ -105,7 +105,7 @@ const PR02Page = () => {
             thirdSectionInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
           } max-w-prose text-center lg:text-left`}
         >
-          <h2 className="text-5xl sm:text-5xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-5xl sm:text-5xl lg:text-5xl font-bold text-copperAccent mb-6">
             Specifications 
           </h2>
           <div className="text-base sm:text-lg lg:text-lg">
@@ -132,7 +132,7 @@ const PR02Page = () => {
       {/* Third Section */}
       <div
         ref={fourthSectionRef}
-        className="bg-black text-white flex flex-col lg:flex-row items-center justify-center w-full py-0 px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
+        className="bg-black text-copperAccent flex flex-col lg:flex-row items-center justify-center w-full py-0 px-8 lg:px-16 space-y-12 lg:space-y-0 lg:space-x-12"
       >
         {/* Image */}
         <img
@@ -149,7 +149,7 @@ const PR02Page = () => {
             fourthSectionInView ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
           } max-w-prose text-center lg:text-left`}
         >
-          <h2 className="text-5xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-5xl sm:text-5xl lg:text-6xl font-bold text-copperAccent mb-6">
             Movement
           </h2>
           <div className="text-base sm:text-lg lg:text-lg">

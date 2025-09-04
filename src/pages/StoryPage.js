@@ -85,7 +85,7 @@ const StoryPage = () => {
 
           {/* Contact Link */}
           <Link
-            className={`mt-4 text-black text-lg sm:text-xl lg:text-xl font-bold hover:text-burgundy transition-all duration-100 transform transition-all duration-[2000ms] ease-in-out ${
+            className={`mt-4 text-black text-lg sm:text-xl lg:text-xl font-bold hover:text-burgundy transition-all duration-50 transform transition-all duration-[2000ms] ease-in-out ${
               textInView
                 ? "translate-x-0 opacity-100"
                 : "translate-x-[50vw] sm:translate-x-full opacity-0"

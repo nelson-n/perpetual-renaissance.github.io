@@ -15,14 +15,14 @@ const Footer = () => {
         </Link>
         {/* Copyright Text */}
         <p className="text-black text-sm text-center sm:text-left">
-          &copy; Perpetual Renaissance | Photos by{' '}
+          &copy; Perpetual Renaissance |{' '}
           <a 
             href="https://www.chriscoephoto.com/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-black hover:text-burgundy transition-all duration-100"
           >
-            Chris Coe
+            Photos by Chris Coe
           </a>
         </p>
       </div>

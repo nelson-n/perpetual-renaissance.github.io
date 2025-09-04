@@ -2,9 +2,19 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useInView } from "react-intersection-observer";
+import useImagePreloader from "../hooks/useImagePreloader";
+import ImagePreloader from "../components/ImagePreloader";
 
 const ContactPage = () => {
   const form = useRef();
+
+  // Image URLs to preload
+  const imageUrls = [
+    `${process.env.PUBLIC_URL}/assets/PR02_COE_PERSON1.jpg`
+  ];
+
+  // Use image preloader hook
+  const { imagesLoaded, loadingProgress } = useImagePreloader(imageUrls);
 
   const { ref: imageRef, inView: imageInView } = useInView({
     triggerOnce: true,
@@ -44,6 +54,11 @@ const ContactPage = () => {
 
     e.target.reset();
   };
+
+  // Show loading spinner until all images are loaded
+  if (!imagesLoaded) {
+    return <ImagePreloader loadingProgress={loadingProgress} />;
+  }
 
   return (
     <div className="bg-black min-h-screen py-24 flex flex-col justify-center items-center lg:space-y-8">
