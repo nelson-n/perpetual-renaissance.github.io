@@ -7,7 +7,7 @@ const LandingPage = () => {
   // Image URLs to preload
   const imageUrls = [
     `${process.env.PUBLIC_URL}/assets/PR02_COE_FACE1.jpg`,
-    `${process.env.PUBLIC_URL}/assets/PR02_COE_FACE4.jpg`, // Mobile image for first section
+    `${process.env.PUBLIC_URL}/assets/PR02_COE_FACE1_MOBILE.jpg`, // Mobile image for first section
     `${process.env.PUBLIC_URL}/assets/PR02_COE_FACE2.jpg`,
     `${process.env.PUBLIC_URL}/assets/PR02_COE_FACE3.jpg`
   ];
@@ -38,10 +38,10 @@ const LandingPage = () => {
     <div className="bg-white text-black font-sans">
 
     {/* Vertical Spacer */}
-    <div className="h-20 md:h-16 lg:h-16"></div>
+    <div className="h-8 md:h-16 lg:h-16"></div>
 
     {/* Vertical Spacer */}
-    <div className="h-20 md:h-16 lg:h-16"></div>
+    <div className="h-8 md:h-16 lg:h-16"></div>
 
     {/* First Image Section */}
     <div
@@ -58,7 +58,7 @@ const LandingPage = () => {
       />
       {/* Mobile Image */}
       <img
-        src={`${process.env.PUBLIC_URL}/assets/PR02_COE_FACE4.jpg`}
+        src={`${process.env.PUBLIC_URL}/assets/PR02_COE_FACE1_MOBILE.jpg`}
         alt="Perpetual Renaissance"
         className={`block md:hidden w-full max-w-6xl transform transition-all duration-[2000ms] ease-in-out ${
           firstSectionInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
@@ -128,7 +128,7 @@ const LandingPage = () => {
       <img
         src={`${process.env.PUBLIC_URL}/assets/PR02_COE_FACE3.jpg`}
         alt="Perpetual Renaissance"
-        className={`w-5/6 lg:w-2/3 max-w-5xl transform transition-all duration-[2000ms] ease-in-out ${
+        className={`w-5/6 lg:w-2/3 max-w-5xl mt-8 lg:mt-0 transform transition-all duration-[2000ms] ease-in-out ${
           thirdSectionInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
         }`}
       />

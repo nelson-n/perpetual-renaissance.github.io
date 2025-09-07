@@ -94,21 +94,21 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu Button - Plus Sign */}
-        <div className="lg:hidden">
+        <div className="lg:hidden flex items-center">
           <button
-            className="text-burgundy focus:outline-none w-6 h-6 relative"
+            className="text-burgundy focus:outline-none w-8 h-8 relative"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
             <motion.span
               animate={{ rotate: menuOpen ? 135 : 0 }}
               transition={{ duration: 0.3 }}
-              className="absolute w-4 h-0.5 bg-burgundy top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              className="absolute w-6 h-0.5 bg-burgundy top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             ></motion.span>
             <motion.span
               animate={{ rotate: menuOpen ? 0 : 90, opacity: menuOpen ? 1 : 1 }}
               transition={{ duration: 0.3 }}
-              className="absolute w-4 h-0.5 bg-burgundy top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              className="absolute w-6 h-0.5 bg-burgundy top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             ></motion.span>
           </button>
         </div>
