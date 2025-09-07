@@ -7,7 +7,7 @@ const ImagePreloader = ({ loadingProgress }) => {
       <div className="loading-content">
         {/* PR Logo */}
         <img
-          src={`${process.env.PUBLIC_URL}/assets/OLD/LoadingLogo.png`}
+          src={`${process.env.PUBLIC_URL}/assets/LoadingLogo.png`}
           alt="Loading Logo"
           className="loading-logo"
           style={{ width: '60px', height: '60px' }} 
