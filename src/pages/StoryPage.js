@@ -14,7 +14,7 @@ const StoryPage = () => {
   // Use image preloader hook
   const { imagesLoaded, loadingProgress } = useImagePreloader(imageUrls);
 
-  {/* Section Load Triggers */}
+  // Section Load Triggers
   const { ref: headerRef, inView: headerInView } = useInView({
     triggerOnce: true,
     threshold: 0.1, 

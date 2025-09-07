@@ -7,6 +7,7 @@ const LandingPage = () => {
   // Image URLs to preload
   const imageUrls = [
     `${process.env.PUBLIC_URL}/assets/PR02_COE_FACE1.jpg`,
+    `${process.env.PUBLIC_URL}/assets/PR02_COE_FACE4.jpg`, // Mobile image for first section
     `${process.env.PUBLIC_URL}/assets/PR02_COE_FACE2.jpg`,
     `${process.env.PUBLIC_URL}/assets/PR02_COE_FACE3.jpg`
   ];
@@ -14,7 +15,7 @@ const LandingPage = () => {
   // Use image preloader hook
   const { imagesLoaded, loadingProgress } = useImagePreloader(imageUrls);
 
-  {/* Section Load Triggers */}
+  // Section Load Triggers
   const { ref: firstSectionRef, inView: firstSectionInView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -37,32 +38,41 @@ const LandingPage = () => {
     <div className="bg-white text-black font-sans">
 
     {/* Vertical Spacer */}
-    <div className="h-16 lg:h-16"></div>
+    <div className="h-20 md:h-16 lg:h-16"></div>
 
     {/* Vertical Spacer */}
-    <div className="h-16 lg:h-16"></div>
+    <div className="h-20 md:h-16 lg:h-16"></div>
 
     {/* First Image Section */}
     <div
       ref={firstSectionRef}
       className="flex flex-row justify-center mt-0 items-center min-h-[50vh]"
     >
+      {/* Desktop Image */}
       <img
         src={`${process.env.PUBLIC_URL}/assets/PR02_COE_FACE1.jpg`}
         alt="Perpetual Renaissance"
-        className={`w-full max-w-6xl transform transition-all duration-[2000ms] ease-in-out ${
+        className={`hidden md:block w-full max-w-6xl transform transition-all duration-[2000ms] ease-in-out ${
+          firstSectionInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
+        }`}
+      />
+      {/* Mobile Image */}
+      <img
+        src={`${process.env.PUBLIC_URL}/assets/PR02_COE_FACE4.jpg`}
+        alt="Perpetual Renaissance"
+        className={`block md:hidden w-full max-w-6xl transform transition-all duration-[2000ms] ease-in-out ${
           firstSectionInView ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
         }`}
       />
     </div>
 
     {/* Vertical Spacer */}
-    <div className="h-16 lg:h-16"></div>
+    <div className="h-20 md:h-16 lg:h-16"></div>
 
     {/* Second Image Section (Black) */}
     <div
       ref={secondSectionRef}
-      className="bg-black text-accent flex flex-col lg:flex-row justify-center items-center w-full px-4 lg:px-16 lg:space-x-24"
+      className="bg-black text-accent flex flex-col lg:flex-row justify-center items-center w-full py-12 md:py-16 px-4 lg:px-16 lg:space-x-24"
     >
       {/* Image */}
       <img
@@ -95,7 +105,7 @@ const LandingPage = () => {
     {/* Third Image Section (White) */}
     <div
       ref={thirdSectionRef}
-      className="bg-white text-black flex flex-col lg:flex-row justify-center items-center w-full py-12 px-4 lg:px-16 lg:space-x-24"
+      className="bg-white text-black flex flex-col lg:flex-row justify-center items-center w-full py-16 md:py-20 px-4 lg:px-16 lg:space-x-24"
     >
       {/* Text */}
       <div
@@ -125,7 +135,7 @@ const LandingPage = () => {
     </div>
 
     {/* Vertical Spacer */}
-    <div className="h-16 lg:h-16"></div>
+    <div className="h-20 md:h-16 lg:h-16"></div>
 
     </div>
   );

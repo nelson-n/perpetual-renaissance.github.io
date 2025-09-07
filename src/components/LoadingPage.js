@@ -1,5 +1,4 @@
 
-import React from "react";
 
 const LoadingPage = ({ onComplete }) => {
   // Complete immediately - no fixed timing

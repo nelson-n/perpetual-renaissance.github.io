@@ -14,7 +14,7 @@ const WatchesPage = () => {
   // Use image preloader hook
   const { imagesLoaded, loadingProgress } = useImagePreloader(imageUrls);
 
-  {/* Section Load Triggers */}
+  // Section Load Triggers
   const { ref: imageRef, inView: imageInView } = useInView({
     triggerOnce: true,
     threshold: 0.2,

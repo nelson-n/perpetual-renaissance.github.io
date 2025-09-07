@@ -14,13 +14,8 @@ const PR02Page = () => {
   // Use image preloader hook
   const { imagesLoaded, loadingProgress } = useImagePreloader(imageUrls);
 
-  {/* Section Load Triggers */}
+  // Section Load Triggers
   const { ref: headerRef, inView: headerInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-
-  const { ref: firstImageRef, inView: firstImageInView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
