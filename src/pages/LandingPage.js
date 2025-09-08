@@ -67,7 +67,7 @@ const LandingPage = () => {
     </div>
 
     {/* Vertical Spacer */}
-    <div className="h-20 md:h-16 lg:h-16"></div>
+    <div className="h-8 md:h-16 lg:h-16"></div>
 
     {/* Second Image Section (Black) */}
     <div
